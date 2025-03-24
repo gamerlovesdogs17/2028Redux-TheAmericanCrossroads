@@ -10234,8 +10234,8 @@ campaignTrail_temp.answer_feedback_json = [
 
 campaignTrail_temp.candidate_image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Newsom_April_2024_%283x4_cropped%29.jpg/220px-Newsom_April_2024_%283x4_cropped%29.jpg";
 campaignTrail_temp.running_mate_image_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Raphael_Warnock_official_photo.jpg/440px-Raphael_Warnock_official_photo.jpg";
-campaignTrail_temp.candidate_last_name = "Newsom";
-campaignTrail_temp.running_mate_last_name = "Warnock";
+campaignTrail_temp.candidate_last_name = " ";
+campaignTrail_temp.running_mate_last_name = " ";
 
 
 
@@ -10257,8 +10257,8 @@ campaignTrail_temp.jet_data = [{
     },
     "banner_enabled": true,
     "banner_data": {
-        "canName": "Newsom",
-        "runName": "Warnock",
+        "canName": "‎ ",
+        "runName": "‎ ",
         "canImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Newsom_April_2024_%283x4_cropped%29.jpg/220px-Newsom_April_2024_%283x4_cropped%29.jpg",
         "runImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Raphael_Warnock_official_photo.jpg/440px-Raphael_Warnock_official_photo.jpg"
     },
@@ -10271,25 +10271,18 @@ campaignTrail_temp.jet_data = [{
 }
 ]
 
-cyoAdventure = function (a) { 
-
-        if (campaignTrail_temp.candidate_json[1].fields.color_hex == '#2c4e87') {
-            const customStyling = document.createElement("style");
-            customStyling.innerHTML = `
-            #campaign_sign {
-                background-image: url("https://i.imgur.com/Y5aPsXM.png");
-                background-size: cover;
-                border-color: #c9c9c9;    
-                border-width: .01em;
-                margin: 0 auto;
-                background-position: center;
-                width: 100%; 
-                height: 104px; 
-                margin-left: -0.07em;
-              }
-            #campaign_sign p {
-                color: rgb(0 0 0 / 0%);
-            }`;
-            document.head.appendChild(customStyling);
-        }
-}
+const style_overwrite = document.createElement("style");
+style_overwrite.innerHTML = 
+`#campaign_sign {
+  background-image: url("https://i.imgur.com/Y5aPsXM.png");
+  background-size: cover;
+  border-color: #c9c9c9;
+  border-width: .01em;
+  margin: 0 auto;
+  background-position: center;
+  width: 100%;
+  height: 104px;
+  margin-left: -0.07em;
+}`
+;
+document.head.appendChild(style_overwrite);
